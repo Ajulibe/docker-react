@@ -30,3 +30,4 @@ deploy: #This deploys the whole folder onto elasticbeanstalk so
   secret_access_key:
     $AWS_SECRET_KEY # Another environment variable
     #generated in IAM of AWS but stored in travis ci
+    #commit it
