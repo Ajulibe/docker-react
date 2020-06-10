@@ -1,4 +1,9 @@
 sudo: required
+
+language: node_js
+node_js:
+  - "stable"
+
 services:
   - docker
 
@@ -6,4 +11,4 @@ before_install:
   - docker build -t akachi/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run akachi/docker-react npm run test -- --coverage
+  - docker run -e CI=true akachi/docker-react npm run test -- --coverage
